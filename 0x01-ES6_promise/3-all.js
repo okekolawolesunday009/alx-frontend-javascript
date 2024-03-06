@@ -6,7 +6,7 @@ export default function handleProfileSignup() {
     uploadPhoto()
       .then((res) => {
         upload = res.body;
-        res(createUser());
+        return (createUser());
       })
       .then((user) => {
         console.log(`${upload} ${user.firstName} ${user.lastName}`);
