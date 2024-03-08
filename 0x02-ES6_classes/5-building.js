@@ -6,7 +6,7 @@ export default class Buiding {
 	}
 		this._sqft = sqft;
 	}
-	get sqft(value) {
+	get sqft() {
 		return this._sqft;
 	}
 
