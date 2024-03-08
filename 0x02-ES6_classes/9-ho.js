@@ -1,1 +1,1 @@
-console.log("love");
+console.log('love');
