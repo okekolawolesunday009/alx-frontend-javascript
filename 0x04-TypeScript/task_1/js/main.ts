@@ -42,3 +42,25 @@ const printTeacher: PrintTeacherFunction = function(firstName: string, lastName:
 	console.log(`${firstName[0]}.${lastName}`)
 }
 printTeacher("John", "Doe");
+
+interface Student {
+    firstName: string;
+    lastName: string;
+    workOnHomeWork(): string;
+    display(): string;
+}
+
+class StudentClass implements Student {
+
+	constructor(public firstName: string, public lastName: string){
+	}
+	workOnHomeWork(): string{
+		return "Currently working";
+	}
+	display(): string {
+		return `${this.firstName}`
+	}
+}
+const teacherAB = new StudentClass("kola", "sunday");
+console.log(`${teacherAB.display()} is ${teacherAB.workOnHomeWork()}`);
+

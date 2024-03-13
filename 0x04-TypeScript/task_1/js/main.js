@@ -18,3 +18,18 @@ var printTeacher = function (firstName, lastName) {
     console.log(firstName[0] + "." + lastName);
 };
 printTeacher("John", "Doe");
+var StudentClass = /** @class */ (function () {
+    function StudentClass(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    StudentClass.prototype.workOnHomeWork = function () {
+        return "Currently working";
+    };
+    StudentClass.prototype.display = function () {
+        return "" + this.firstName;
+    };
+    return StudentClass;
+}());
+var teacherAB = new StudentClass("kola", "sunday");
+console.log(teacherAB.display() + " is " + teacherAB.workOnHomeWork());
