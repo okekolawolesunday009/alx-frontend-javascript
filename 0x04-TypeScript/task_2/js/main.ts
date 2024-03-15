@@ -1,9 +1,9 @@
-interface DirectorInterface {
+export interface DirectorInterface {
         workFromHome(): string;
         getCoffeeBreak(): string;
         workDirectorTasks(): string;
 }
-interface TeacherInterface {
+export interface TeacherInterface {
         workFromHome(): string;
         getCoffeeBreak(): string;
         workTeacherTasks(): string;
@@ -22,7 +22,7 @@ class Director implements DirectorInterface {
         }
 }
 
-class Teacher implements TeacherInterface {
+export class Teacher implements TeacherInterface {
         constructor(){}
         workFromHome(): string {
                 return "Working from home"
