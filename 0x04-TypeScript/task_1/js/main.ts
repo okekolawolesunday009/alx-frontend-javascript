@@ -1,5 +1,5 @@
 
-interface Teacher {
+export interface Teacher {
       firstName: string;
       fullTimeEmployee: boolean;
       lastName: string;
@@ -17,7 +17,7 @@ const teacherA: Teacher = {
 };
 console.log(teacherA);
 
-interface Directors extends Teacher {
+export interface Directors extends Teacher {
 	numberOfReports: number;
 }
 
@@ -31,11 +31,11 @@ const director1: Directors = {
 console.log(director1);
 
 
-interface PrintTeacher {
+export interface PrintTeacher {
     firstName: string;
     lastName: string;
 }
-interface PrintTeacherFunction {
+export interface PrintTeacherFunction {
 	(firstName: string, lastName: string):void;
 }
 const printTeacher: PrintTeacherFunction = function(firstName: string, lastName: string): void {
