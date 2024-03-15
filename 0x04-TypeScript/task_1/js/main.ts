@@ -43,14 +43,11 @@ const printTeacher: PrintTeacherFunction = function(firstName: string, lastName:
 }
 printTeacher("John", "Doe");
 
-interface Student {
-    firstName: string;
-    lastName: string;
-    workOnHomeWork(): string;
-    display(): string;
+export interface StudentConstructor {
+  new(firstName: string, lastName: string): StudentClassInterface;
 }
 
-class StudentClass implements Student {
+class StudentClass implements StudentConstructor{
 
 	constructor(public firstName: string, public lastName: string){
 	}
